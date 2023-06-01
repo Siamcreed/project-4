@@ -1,0 +1,26 @@
+<h1><%= @driver.first_name %></h1>
+
+<h2>Cars: </h2>
+
+<table>
+<tr>
+<th>Car name</th>
+
+<th>Downforce</th>
+<th>Topspeed</th>
+</tr>
+
+<br></br>
+
+
+
+<ul>
+<% @cars.each do |car| %>
+    <li class='row'>
+    <strong><%= car.brand_name %></strong>
+    <em><%= car.downforce%></em>
+    <em><%= car.topspeed%></em>
+</li>
+    <% end %>
+    </ul>
+    </table>

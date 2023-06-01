@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  driver: one
+  brand_name: MyString
+  downforce: MyString
+  topspeed: MyString
+
+two:
+  driver: two
+  brand_name: MyString
+  downforce: MyString
+  topspeed: MyString

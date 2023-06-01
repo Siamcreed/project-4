@@ -1,0 +1,24 @@
+<h1>Drivers</h1>
+
+<%= link_to "Create new drivers", drivers_new_path %>
+
+<br></br>
+
+<table>
+<tr>
+<th>Driver</th>
+
+<th>Lastname</th>
+<th>Wins</th>
+</tr>
+
+<% @drivers.each do |driver|%>
+    <tr>
+     <td><%= driver.first_name%></td>
+     <td><%= driver.last_name%></td>
+     <td><%= driver.wins%></td>
+     <td><%= %></td>
+    
+    </tr>
+    <% end %>
+</table>
