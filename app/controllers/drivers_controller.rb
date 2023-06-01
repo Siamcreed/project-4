@@ -11,4 +11,10 @@ class DriversController < ApplicationController
     def new
         @driver = Driver.new
     end
+
+    def create
+        Driver.create(params.require(:driver).permit(:first_name, :last_name, :wins))
+
+        redirect_to drivers_path
+    end
 end

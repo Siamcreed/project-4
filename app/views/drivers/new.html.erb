@@ -1,1 +1,22 @@
 <h1>New Driver</h1>
+
+<%= form_for @driver do|f| %>
+    
+    <div class="field">
+    <%= f.label :first_name, 'Firstname' %>
+    <%= f.text_field :first_name, placeholder: 'Input firstname...' %>
+    </div>
+
+    <div class="field">
+    <%= f.label :last_name, 'Lastname' %>
+    <%= f.text_field :last_name, placeholder: 'Input lastname...' %>
+    </div>
+
+    <div class="field">
+    <%= f.label :wins, 'Wins' %>
+    <%= f.text_field :wins, placeholder: 'Write your wins...' %>
+    </div>
+
+    <%= f.submit 'Confirm changes', :class => 'button' %>
+
+    <% end%>
