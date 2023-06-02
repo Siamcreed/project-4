@@ -1,24 +1,38 @@
-# README
+Race driver app
+Deployment
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+# Technologies
+Rails and Ruby
 
-* Ruby version
+# Brief
+This app is supposed to show custom race car drivers and and their cars.
 
-* System dependencies
+# Goals
 
-* Configuration
 
-* Database creation
+Technical requirement
 
-* Database initialization
 
-* How to run the test suite
+# Planning
 
-* Services (job queues, cache servers, search engines, etc.)
+# User stories
+As a racing fan I want to be login
+As a racing fan I want to be able to the driver and their cars.
+As a racing fan I want to be able to make a custom driver and car.
+As a racing fan I want to be able to edit d and delete drivers.
+As a racing fan I want to make a profile.
+As a raning fan I want to be able to see other people's stuff.
+As a racing fan I would like to be able to make more than one driver.
+As a racing fan I want to be able to perform CRUD operations.
 
-* Deployment instructions
+# Build process
+Challenges
 
-* ...
+# Wins
+I got the MVP done.
+
+# Bugs
+
+
+# Improvement

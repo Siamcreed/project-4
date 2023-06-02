@@ -17,4 +17,16 @@ class DriversController < ApplicationController
 
         redirect_to drivers_path
     end
+
+    def edit
+        @driver = Driver.find(params[:id])
+    end
+
+    def update
+        @driver = Driver.find(params[:id])
+        
+        @driver.update(params.require(:driver).permit(:first_name, :last_name, :wins))
+
+        redirect_to @driver
+    end
 end
