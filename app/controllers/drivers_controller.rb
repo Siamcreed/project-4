@@ -1,10 +1,11 @@
 class DriversController < ApplicationController
+    before_action :set_driver, only: [:show, :edit, :update, :destroy]
+    
     def index
         @drivers = Driver.all
     end
 
     def show
-        @driver = Driver.find(params[:id])
         @cars = @driver.cars
     end
 
@@ -13,28 +14,37 @@ class DriversController < ApplicationController
     end
 
     def create
-        Driver.create(params.require(:driver).permit(:first_name, :last_name, :wins))
+        Driver.create(driver_params)
 
         redirect_to drivers_path
     end
 
     def edit
-        @driver = Driver.find(params[:id])
+        
     end
 
     def update
-        @driver = Driver.find(params[:id])
         
-        @driver.update(params.require(:driver).permit(:first_name, :last_name, :wins))
+         @driver.update(driver_params)
 
         redirect_to @driver
     end
 
     def destroy
-        driver = Driver.find(params[:id])
+        
       
-        driver.destroy
+        @driver.destroy
 
         redirect_to drivers_path
+    end
+
+    private
+
+    def set_driver
+        @driver = Driver.find(params[:id])
+    end
+
+    def driver_params
+        params.require(:driver).permit(:first_name, :last_name, :wins)
     end
 end
