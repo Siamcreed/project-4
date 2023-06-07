@@ -1,29 +1,70 @@
+<style>
+  h1 {
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .back {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .row:nth-child(even) {
+    # background-color: #f9f9f9;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+
+  em {
+    font-style: italic;
+  }
+</style>
+
 <h1><%= @driver.first_name %></h1>
 
-<%= link_to "Back", drivers_path %>
+<%= link_to "Back", drivers_path, class: "back" %>
 
-<h2>Cars: </h2>
+<h2>Cars:</h2>
 
 <%= link_to "Make a new car", new_driver_car_path(@driver) %>
+
 <table>
-<tr>
-<th>Car name</th>
+  <tr>
+    <th>Car name</th>
+    <th>Downforce</th>
+    <th>Topspeed</th>
+  </tr>
 
-<th>Downforce</th>
-<th>Topspeed</th>
-</tr>
-
-<br></br>
-
-
-
-<ul>
-<% @cars.each do |car| %>
-    <li class='row'>
-    <strong><%= car.brand_name %></strong>
-    <em><%= car.downforce%></em>
-    <em><%= car.topspeed%></em>
-</li>
-    <% end %>
-    </ul>
-    </table>
+  <% @cars.each do |car| %>
+  <tr class="row">
+    <td><strong><%= car.brand_name %></strong></td>
+    <td><em><%= car.downforce %></em></td>
+    <td><em><%= car.topspeed %></em></td>
+  </tr>
+  <% end %>
+</table>

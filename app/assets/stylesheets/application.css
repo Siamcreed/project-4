@@ -13,3 +13,158 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+  background-image: url(https://i.pinimg.com/originals/d0/9c/4c/d09c4cfd1b93cc66dc13c8b461fd2145.jpg);
+  background-size: cover;
+  color: #fff;
+ }
+ 
+ .signinfo {
+   text-align: center;
+ }
+ 
+ h1 {
+   text-align: center;
+   color: #fff;
+  margin-bottom: 20px;
+ }
+ 
+ .create-btn {
+   display: inline-block;
+   padding: 8px 16px;
+   background-color: #007bff;
+   color: #fff;
+   text-decoration: none;
+   border-radius: 4px;
+ }
+ 
+ .create-btn:hover {
+   background-color: #0056b3;
+ }
+ 
+ tr {
+    
+    text-align: center;
+
+ }
+ 
+ .edit-btn,
+.delete-btn {
+  display: inline-block;
+  padding: 4px 10px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+  background-color: #0056b3;
+}
+
+
+ .tab {
+    margin-bottom: 20px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+ .back-btn{
+   display: inline-block;
+   padding: 4px 10px;
+   background-color: #ff0000;
+   color: #fff;
+   text-decoration: none;
+   border-radius: 4px;
+ }
+
+ .back{
+    display: inline-block;
+   padding: 8px 16px;
+   background-color: #00ff62;
+   color: #fff;
+   text-decoration: none;
+   border-radius: 4px;
+ }
+
+ .back:hover{
+    background-color: #1d9e4e;
+ }
+
+
+ th, td {
+    padding: 10px;
+    text-align: center;
+  }
+
+  th {
+    background-color: grey;
+  }
+
+
+  a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+
+ .custom{
+  color: #ff0000;
+ }
+
+ .field{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+
+ .signinfo{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+ }
+
+ .button{
+    display: inline-block;
+   padding: 8px 16px;
+   background-color: #00ff62;
+   color: #fff;
+   text-decoration: none;
+   border-radius: 4px;
+ }
+
+ label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  input[type="text"], input[type="submit"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+ 
+  .firstname {
+    font-weight: bold;
+    color: #333333;
+  }
+  
+  
+  
+  
+  
