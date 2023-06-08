@@ -60,7 +60,7 @@ Day 9 : I finished the CSS and README and made the Code more DRY.
 Challenges
 
 # Wins
-I got the authentication working and full CRUD working on the Driver model
+I got the authentication working and full CRUD working on the Driver model. And I got the pages working well and looking good.
 
 # Bugs
 Sometimes when deleting the app will not delete the driver. And sometimes the app only displays the drivers first name.
