@@ -3,7 +3,7 @@ Deployment
 
 
 # Technologies
-Rails and Ruby
+Rails and Ruby and CSS
 
 # Brief
 This app is supposed to show custom race car drivers and and their cars.
@@ -47,6 +47,16 @@ As a racing fan I would like to be able to make more than one driver.
 As a racing fan I want to be able to perform CRUD operations.
 
 # Build process
+Day 1: I made the driver and car models.
+Day 2 : I deleted the models and remade them but with relationships.
+Day 3 : I succefully rendered some of the pages in Rails and tested.I implimented the CRU in CRUD for the driver model.
+Day 4 : I made completed the CRUD for the driver model and added some CRUD for the car model. Then I encoutnterd some bugs while trying to delete some of the items, I discovered the problems were in the car controller and I fixed the problem. 
+Day 5 : I attempted the authentication but ultimately failed.
+Day 6 : I rewatched some videos and implemented the authentication and made the page force the authentication. And made some accounts. Then I cleaned up the pages by adding some navigation.
+Day 7 : Only CSS.
+Day 8 : Mostly CSS and I started the README.
+Day 9 : I finished the CSS and README and made the Code more DRY.
+
 Challenges
 
 # Wins
