@@ -1,13 +1,23 @@
 class CarsController < ApplicationController
+    before_action :set_driver
+  
     def new
-        @driver = Driver.find(params[:driver_id])
-        @car = @driver.cars.new
+      @car = @driver.cars.new
     end
-
+  
     def create
-        @driver = Driver.find(params[:driver_id])
-        @driver.cars.create(params.require(:car).permit(:brand_name, :downforce, :topspeed))
-        
-        redirect_to @driver
+      @driver.cars.create(car_params)
+      redirect_to @driver
     end
-end
+  
+    private
+  
+    def set_driver
+      @driver = Driver.find(params[:driver_id])
+    end
+  
+    def car_params
+      params.require(:car).permit(:brand_name, :downforce, :topspeed)
+    end
+  end
+  

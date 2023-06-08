@@ -1,22 +1,8 @@
-<h1 class= "signinfo">New car for <%= @driver.first_name %></h1>
+<h1 class="signinfo">New car for <%= @driver.first_name %></h1>
 
 <%= form_for [@driver, @car] do |f| %>
-
- <div class='field'>
- <%= f.label :brand_name, 'Brand name' %>
- <%= f.text_field :brand_name %>
- </div>
-
- <div class='field'>
- <%= f.label :topspeed, 'Topspeed' %>
- <%= f.text_field :topspeed %>
- </div>
-
- <div class='field'>
- <%= f.label :downforce, 'Downforce' %>
- <%= f.text_field :downforce %>
- </div>
-
- <%= f.submit 'Confirm'%>
-
-    <% end %>
+  <%= render_field(f, :brand_name, 'Brand name') %>
+  <%= render_field(f, :topspeed, 'Topspeed') %>
+  <%= render_field(f, :downforce, 'Downforce') %>
+  <%= f.submit 'Confirm' %>
+<% end %>
