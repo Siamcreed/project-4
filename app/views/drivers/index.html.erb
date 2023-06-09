@@ -1,35 +1,38 @@
-<div class: "flex-container">
-<h1>Drivers</h1>
+<div class="flex-container">
+  <h1>Drivers</h1>
 
-<%= link_to "Create new driver", new_driver_path, class: "create-btn" %>
+  <%= link_to "Create new driver", new_driver_path, class: "create-btn" %>
 
-<br></br>
+  <br>
 
-<div class: "tab">
-<table>
-<tr  class: "tables">
-<th>Driver</th>
+  <div class="tab">
+    <table>
+      <tr class="tables">
+        <th>Driver</th>
+        <th>Lastname</th>
+        <th>Wins</th>
+        <th>Edit/Delete</th>
+      </tr>
 
-<th>Lastname</th>
-<th>Wins</th>
-<th>Edit/Delete</th>
-</tr>
-</div>
+      <% @drivers.each do |driver| %>
+        <tr>
+          <td><%= link_to driver.first_name, driver_path(driver), class: "firstname" %></td>
+          <td><%= driver.last_name %></td>
+          <td><%= driver.wins %></td>
+          <td>
+            <%= link_to 'Edit', edit_driver_path(driver), class: "edit-btn" %>
+            &nbsp;|&nbsp;
+            <%= link_to 'Delete', driver_path(driver), data: { turbo_method: :delete, turbo_confirm: 'Are you sure you want to delete this driver?' }, class: "delete-btn" %>
+          </td>
+        </tr>
 
-<% @drivers.each do |driver|%>
-    <tr>
-     <td><%= link_to driver.first_name, driver_path(driver), class:"firstname" %></td>
-     <td><%= driver.last_name%></td>
-     <td><%= driver.wins%></td>
-     <td>
-     <%= link_to 'Edit', edit_driver_path(driver), class:"edit-btn" %>
-     &nbsp;|&nbsp;
-     <%= link_to 'Delete', driver_path(driver),
-        data: 
-        { turbo_method: :delete, turbo_confirm: 'Are you sure you want to delete this driver ?' }, class:"delete-btn" %>
-     </td>
-    
-    </tr>
-    <% end %>
-</table>
+        <% driver.cars.each do |car| %>
+          <tr>
+            <td colspan="2">Car Name: <%= car.brand_name %></td>
+            <td colspan="2">Downforce/Topspeed: <%= car.downforce %>, <%= car.topspeed %></td>
+          </tr>
+        <% end %>
+      <% end %>
+    </table>
+  </div>
 </div>
