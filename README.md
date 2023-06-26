@@ -47,17 +47,20 @@ As a racing fan I would like to be able to make more than one driver.
 As a racing fan I want to be able to perform CRUD operations.
 
 # Build process
-Day 1: I made the driver and car models.
-Day 2 : I deleted the models and remade them but with relationships.
-Day 3 : I succefully rendered some of the pages in Rails and tested.I implimented the CRU in CRUD for the driver model.
-Day 4 : I made completed the CRUD for the driver model and added some CRUD for the car model. Then I encoutnterd some bugs while trying to delete some of the items, I discovered the problems were in the car controller and I fixed the problem. 
-Day 5 : I attempted the authentication but ultimately failed.
-Day 6 : I rewatched some videos and implemented the authentication and made the page force the authentication. And made some accounts. Then I cleaned up the pages by adding some navigation.
-Day 7 : Only CSS.
-Day 8 : Mostly CSS and I started the README.
-Day 9 : I finished the CSS and README and made the Code more DRY.
 
+Day 1:  I started with the wireframes, user stories and ERD using exaclidraw .
+Day 2 : I made a cars and driver model using rails g model and then rendered the page using rails s but I ran into an issue, I couldn’t render the car model with the driver model.I deleted the models and remade them but with relationships and seeded it with DB seed. I then added “has_many :cars” so I could add lots of cars to one driver.
+Day 3 : I successfully rendered some of the pages in Rails and tested by making a file called “index.html.erb” in the view directory under the app directory and rendered it.I implemented the CRU in CRUD for the driver model which was done with create, update, edit and destroy in the drivers controller. I also made other pages so I could implement the CRUD. 
+Day 4 : I completed the CRUD for the driver model and added some CRUD for the car model. Then I encountered some bugs while trying to delete some of the items, I discovered the problems were in the car controller and I fixed the problem which was dependent destroy was in the wrong place. 
+Day 5 : I attempted the authentication but ultimately failed because I was unfamiliar with it. 
+Day 6 : I rewatched some videos and implemented the authentication using devise and made the page force the authentication with “before_action :authenticate_user!
+”. And made some accounts. Then I cleaned up the pages by adding some navigation by adding links.
+ Day 7 : Only CSS. Which was adding a background picture and making the links look nicer and change colour when highlighted
+Day 8 : I added a bar and arranged the information to be properly display along with the buttons and I started the README.
+ Day 9 : I finished the CSS and README and made the Code more DRY.
 Challenges
+I couldn’t render the car and driver models together . The issue was that I didn’t generate them with relationships. I then deleted them and regenerated and  after that seeded my database using DB seed. 
+The other challenge was the delete function for the driver model. The issue was that if the driver model had a car model attached to it would not delete. The reason for that was because I added the dependent destroy in  the wrong place so I added it to the driver model so the car and the driver model will be deleted.
 
 # Wins
 I got the authentication working and full CRUD working on the Driver model. And I got the pages working well and looking good.
