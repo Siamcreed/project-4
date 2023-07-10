@@ -101,11 +101,14 @@ Day 8 : I added a bar and arranged the information to be properly display along 
 
  The issue was that I didn’t generate them with relationships. I then deleted them and regenerated and  after that seeded my database using DB seed. 
 The other challenge was the delete function for the driver model. The issue was that if the driver model had a car model attached to it would not delete. The reason for that was because I added the dependent destroy in  the wrong place so I added it to the driver model so the car and the driver model will be deleted.
-Wins
+
+# Wins
+
 I got the authentication working and full CRUD working on the Driver model. And I got the pages working well and looking good.
-Bugs
+
+# Bugs
 Sometimes when deleting the app will not delete the driver. And sometimes the app only displays the drivers first name.
-Improvement
+# Improvement
 The CSS could be so much better and I could have added more content to the app. As well full CRUD to the cars as well (the car model can be created and read but can’t be updated or deleted without deleting the driver first ). The background picture I chose wasn’t that good and I could reposition the items and the page better. I could also make the landing / login page more in the centre instead of making it look like the default page..
 
 # Key learning
